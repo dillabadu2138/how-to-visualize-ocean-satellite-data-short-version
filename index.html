@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<title>해양위성 3D 가시화</title>
+
+		<link rel="stylesheet" href="dist/reset.css" />
+		<link rel="stylesheet" href="dist/reveal.css" />
+		<link rel="stylesheet" href="dist/theme/black.css" />
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" />
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>해양위성 3D 가시화 발표자료</h2>
+					<img data-src="dist/images/title.jpg" style="height: 400px" />
+					<p>
+						<small>해양사업그룹@<a href="http://all4land.com/" target="_blank">올포랜드</a> </small>
+					</p>
+				</section>
+
+				<section data-transition="slide">
+					<h4>배경</h4>
+					<img data-src="dist/images/background.png" style="height: 400px" />
+					<ul>
+						<li class="fragment highlight-current-green" style="font-size: 25px">
+							2D 지도는 이제 지겹다... 디지털 트윈과 같이 좀더 사실적인 3D 지도 위에 다양한 3D
+							인터랙션이 가능한 데이터 분석을 할 수 없을까?
+						</li>
+						<li class="fragment highlight-current-green" style="font-size: 25px">
+							기존 라이브러리를 활용해 천만개 ~ 일억개 셀 수 이상의 대용량 그리드 데이터를
+							렌더링하는데 한계가 있다.
+						</li>
+						<li class="fragment highlight-current-green" style="font-size: 25px">
+							공간정보 또는 지도 라이브러리에 의존하지 않고 좀 더 Low-Level 단의 작업을 통해 없는
+							기능들을 만들며 직접 커스터마이징해보고 싶은 욕심이 생겼다.
+						</li>
+					</ul>
+				</section>
+
+				<section data-transition="slide">
+					<h4>소개</h4>
+					<video data-autoplay src="dist/videos/intro.mp4"></video>
+				</section>
+
+				<section data-transition="slide">
+					<h4>변수 제어</h4>
+					<video data-autoplay data-src="dist/videos/variable_control.mp4"></video>
+					<li style="font-size: 30px">포인트 형태 또는 텍스쳐를 이용한 래스터 형태의 가시화</li>
+					<li style="font-size: 30px">
+						변수 토글 온/오프, 투명도 설정, 최솟최댓값 조정, 색상 스케일 선택
+					</li>
+				</section>
+
+				<section data-transition="slide">
+					<h4>해안선</h4>
+					<video data-autoplay src="dist/videos/coastline.mp4"></video>
+					<li style="font-size: 30px">해안선 토글 온/오프, 투명도 설정, 단일 색상 선택</li>
+				</section>
+
+				<section data-transition="slide">
+					<h4>지형지물</h4>
+					<video data-autoplay src="dist/videos/heightmap.mp4"></video>
+					<li style="font-size: 30px">Heightmap 스케일 값 조정으로 고도 및 수심 반영</li>
+				</section>
+
+				<section data-transition="slide">
+					<h4>기타 기능</h4>
+					<img data-src="dist/images/other_functions.png" style="height: 400px" />
+					<p>
+						<small>
+							그 외 다양한 파라미터들을 업데이트 시 바로 적용 (카메라, 축 도우미, 줌 및 회전 속도
+							등)
+						</small>
+					</p>
+				</section>
+
+				<section data-transition="slide">
+					<h4>활용용도</h4>
+					<ul>
+						<li class="fragment highlight-current-green" style="font-size: 30px">
+							사실주의적 3D 가시화 및 인터랙션 -> 교육/홍보에 활용 가능
+						</li>
+						<li class="fragment highlight-current-green" style="font-size: 30px">
+							GPU-가속 렌더링으로 빠른 속도 -> 신속한 의사결정 지원
+						</li>
+						<li class="fragment highlight-current-green" style="font-size: 30px">
+							WebGL을 활용하여 기존의 공간정보 및 지도 라이브러리보다 더 Low-Level 단에서
+							커스터마이징 -> 새로운 기능 추가 가능성 unlimited
+						</li>
+					</ul>
+				</section>
+
+				<section data-transition="slide">
+					<h4><a href="http://211.178.39.246:12588/">직접해보세요!</a></h4>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'c/t',
+				autoPlayMedia: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			});
+		</script>
+	</body>
+</html>
